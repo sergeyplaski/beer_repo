@@ -29,6 +29,7 @@
 }
 .name {
     margin-left: 1.5rem;
+    color: #921e2d;
 }
 .first, .second {
     display: flex;

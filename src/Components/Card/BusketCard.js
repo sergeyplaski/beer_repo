@@ -14,7 +14,7 @@ const BusketCard = (props) => {
         <div className={styles.first}>
         <span onClick={() => countDelete(props.id)} className={styles.delete}>&times;</span> 
             <img src={props.img} className={styles.img}/>
-            <span className={styles.name}>{props.img}</span>
+            <span className={styles.name}>{props.name}</span>
         </div>
         <div className={styles.second}>
             <button onClick={() => countUnAdd(props.id)} className={styles.cartBtn}>-</button>
