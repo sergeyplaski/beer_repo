@@ -1,0 +1,81 @@
+
+.aside {
+    width: 100%;
+    box-shadow: 0.625rem 0 0.625rem 0 rgba(0, 0, 0, 0.15);
+    position: absolute;
+    /* top: 0; */
+    left: 0;
+    min-height: 100%;
+    transition: 1s;
+    z-index: 2;
+    padding-top: 1.5rem;
+
+}
+
+.asideShow {
+    position: absolute;
+    transition: 1s;
+    width: 100%;
+    top: -50rem;
+    left: -100rem;
+}
+
+.items{
+    overflow: scroll;
+    height: 165px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); 
+    padding: 1.6rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+
+}
+
+.buttonBuy {
+    color: #921e2d;
+    font-weight: 600;
+    font-size: 17px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #c7c7c3;
+    padding: 0.29411765rem 1.76470588rem;
+    border-radius: 0.352294118rem;
+    display: block;
+    width: 87%;
+    text-align: center;
+}
+
+.buttonBuy:hover {
+    background-color: #921e2d;
+    color: #fff;
+    transition: 1.5s;
+}
+.container{
+    max-width: 500px;
+    position: relative;
+}
+/* .container {
+    max-width: 500px;
+    transition-duration: 3s;
+
+    /* position: relative; */
+    /* display: block; */
+    /* transition: 4s; */
+/* }  */
+
+@media screen and (min-width: 800px) {
+    .container {
+        max-width: 900px;
+    }
+    .items{
+        padding-right: 1.9rem;
+  }
+  .buttonBuy {
+    font-size: 35px;
+    width: 93.5%;
+  }
+  .items{
+    height: 185px;
+  }
+}

@@ -2,11 +2,10 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {getGalleryAsync} from './react/actions/galleryActions';
 import Main from './Components/Main/Main';
-import styles from './App.css';
 import Header from './Components/Header/Header';
+import styles from './App.css';
 import {getRandomProductAsync} from './react/actions/randomActions';
 import {loadSliderData} from "./react/actions/sliderActions";
-import './App.css';
 
 class App extends Component {
 
