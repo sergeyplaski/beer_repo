@@ -7,6 +7,10 @@ import {randomProduct} from './randomReducer';
 import {sliderReducer} from "./sliderReducer";
 import favorites from './favoriteReducer';
 import mobMenuExpanded from './mobileMenuReducer';
+import busket from '../reducers/busketReducer';
+import isActiveBusket from '../reducers/isActiveReducers';
+import priceBusket from './priceBusketReducer';
+import totalBusket from './totalBusketReducer';
 
 const rootReducer = combineReducers ({
     gallery,
@@ -16,6 +20,10 @@ const rootReducer = combineReducers ({
     sliderReducer,
     favorites,
     mobMenuExpanded,
+    busket,
+    isActiveBusket: isActiveBusket,
+    gallery,
+    priceBusket,
 });
 
 export default rootReducer;

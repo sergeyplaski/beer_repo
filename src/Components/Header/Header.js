@@ -5,6 +5,7 @@ import {NavLink} from 'react-router-dom';
 import Card from '../Card/Card';
 import {expandMobileMenu, collapseMobileMenu} from '../../react/actions/mobileMenuActions';
 import styles from './Header.css';
+import Busket from '../Busket/Busket';
 
 const Header = (props) => {
     const rp = props.randomProduct;
@@ -75,6 +76,7 @@ const Header = (props) => {
                 </div>
             </div>
         </div>
+        <Busket/>
     </div>;
 };
 
