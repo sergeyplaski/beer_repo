@@ -10,7 +10,7 @@ Header {
 
 .header__wrapper {
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     height: 80vh;
     background-size: cover !important;
     background-image: url('./img/bg2.jpg');

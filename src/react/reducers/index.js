@@ -22,7 +22,6 @@ const rootReducer = combineReducers ({
     mobMenuExpanded,
     busket,
     isActiveBusket: isActiveBusket,
-    gallery,
     priceBusket,
 });
 

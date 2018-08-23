@@ -6,6 +6,7 @@ import Card from '../Card/Card';
 import {expandMobileMenu, collapseMobileMenu} from '../../react/actions/mobileMenuActions';
 import styles from './Header.css';
 import Busket from '../Busket/Busket';
+import {busketActive} from '../../react/actions/isActiveAction';
 
 const Header = (props) => {
     const rp = props.randomProduct;
@@ -43,6 +44,8 @@ const Header = (props) => {
                 <li className={styles["header__menu-item"]}><NavLink to='/'>Featured</NavLink></li>
             </ul>
 
+        <Busket/>
+
             <span className={styles["header__basketicon"]}>
                 {props.busketItems > 0
                     ? <span className={styles["header__basketcount"]}>
@@ -50,10 +53,11 @@ const Header = (props) => {
                     </span>
                     : null
                 }
-                <i className="fas fa-shopping-cart"></i>
+                <i className="fas fa-shopping-cart" onClick={props.busketActive}></i>
+
                 </span>
 
-            <div className={styles["header__content"]}>
+            {props.isActiveBusket ?  null : <div className={styles["header__content"]}>
                 <div className={styles.slide}>
                     <div className={styles["slide-inner"]}>
                         <h1 className={styles["slide-quote"]}>Ah, beer! The cause of and the solution to all of
@@ -74,9 +78,8 @@ const Header = (props) => {
                         /> : null
                     }
                 </div>
-            </div>
+            </div>}
         </div>
-        <Busket/>
     </div>;
 };
 
@@ -90,6 +93,7 @@ function MSTP (state) {
         mobMenuExpanded: state.mobMenuExpanded,
         // busketItems: state.busket.length,
         busketItems: 3,
+        isActiveBusket: state.isActiveBusket
     }
 }
 
@@ -101,6 +105,9 @@ function MDTP (dispatch) {
         collapseMobMenu: function() {
             dispatch(collapseMobileMenu());
         },
+        busketActive: function () {
+            dispatch(busketActive())
+        }
     }
 }
 

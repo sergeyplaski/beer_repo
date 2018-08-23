@@ -7,6 +7,7 @@ import Header from './Components/Header/Header';
 import {getRandomProductAsync} from './react/actions/randomActions';
 import {loadSliderData} from "./react/actions/sliderActions";
 import './App.css';
+// import Busket from '../src/Components/Busket/Busket';
 
 class App extends Component {
 
@@ -17,9 +18,13 @@ class App extends Component {
     };
 
     render() {
+        const {isActiveBusket} = this.props;
         return (
             <div className={styles.App}>
+                
+                {/* {this.props.isActiveBusket ? } */}
                 <Header/>
+                {/* <Busket/> */}
                 <Main/>
             </div>
         );
@@ -30,6 +35,7 @@ function MSTP(state) {
     return {
         randomProduct: state.randomProduct,
         sliderData: state.sliderData,
+        isActiveBusket: state.isActiveBusket,
     }
 }
 

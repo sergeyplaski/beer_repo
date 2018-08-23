@@ -1,23 +1,31 @@
 
 .aside {
-    width: 100%;
+    width: 0;
+    height: 0;
     box-shadow: 0.625rem 0 0.625rem 0 rgba(0, 0, 0, 0.15);
     position: absolute;
-    /* top: 0; */
-    left: 0;
-    min-height: 100%;
+    top: -55px;
+    right: 0;
+    opacity: 0;
     transition: 1s;
-    z-index: 2;
+    z-index: -10;
     padding-top: 1.5rem;
+    transition: 1s;
+    transform: translate(50%, -50%); 
+
+
 
 }
 
 .asideShow {
-    position: absolute;
-    transition: 1s;
-    width: 100%;
-    top: -50rem;
-    left: -100rem;
+    opacity: 1;
+    width: 80%;
+    min-height: 100%;
+    z-index: 10;
+    /* top: 100px;
+    right: -50px; */
+    top: 50%; 
+    right: 50%;
 }
 
 .items{
@@ -52,8 +60,9 @@
     transition: 1.5s;
 }
 .container{
-    max-width: 500px;
+    /* max-width: 500px; */
     position: relative;
+    /* z-index: 10; */
 }
 /* .container {
     max-width: 500px;
