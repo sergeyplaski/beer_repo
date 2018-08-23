@@ -2,7 +2,7 @@
 .aside {
     width: 0;
     height: 0;
-    box-shadow: 0.625rem 0 0.625rem 0 rgba(0, 0, 0, 0.15);
+    /* box-shadow: 0.625rem 0 0.625rem 0 rgba(0, 0, 0, 0.15); */
     position: absolute;
     top: -55px;
     right: 0;
@@ -60,7 +60,7 @@
     transition: 1.5s;
 }
 .container{
-    /* max-width: 500px; */
+    max-width: 500px;
     position: relative;
     /* z-index: 10; */
 }
