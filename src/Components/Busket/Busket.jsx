@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styles from './Busket.css';
 import {addToBasket, price, countDelete} from '../../react/actions/busketActions';
-import Card from '../Card/Card';
+import Card from '../Card/Cards';
 import {busketActive} from '../../react/actions/isActiveAction';
 import {totalBusketSelectors} from '../../react/selectors/busketSelectors';
 

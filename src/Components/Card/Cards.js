@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Card.css';
+import styles from './Cards.css';
 import {connect} from 'react-redux';
 import {addToBasket, countAdd, countUnAdd, price, countDelete, total} from '../../react/actions/busketActions';
 import {priceBusket} from '../../react/actions/priceBusketAction';
