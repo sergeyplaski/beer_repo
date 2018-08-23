@@ -57,7 +57,7 @@ const Header = (props) => {
 
                 </span>
 
-            {props.isActiveBusket ?  null : <div className={styles["header__content"]}>
+            <div className={styles["header__content"]}>
                 <div className={styles.slide}>
                     <div className={styles["slide-inner"]}>
                         <h1 className={styles["slide-quote"]}>Ah, beer! The cause of and the solution to all of
@@ -78,7 +78,7 @@ const Header = (props) => {
                         /> : null
                     }
                 </div>
-            </div>}
+            </div>
         </div>
     </div>;
 };

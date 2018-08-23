@@ -5,6 +5,8 @@ import starActive from './starActive.svg';
 import {toggleFavorite} from '../../react/actions/favoriteActions';
 import {connect} from 'react-redux';
 import styles from './Card.css';
+import {addToBasket, price, countDelete} from '../../react/actions/busketActions';
+
 
 
 const Card = (props) => {
@@ -42,7 +44,7 @@ const Card = (props) => {
                 <NavLink to={`/beerPage/${props.name}`}>
                     <button className={styles.moreBtn}>More...</button>
                 </NavLink>
-                <button className={styles.cartBtn}
+                <button className={styles.cartBtn} onClick={() => props.addItem(props.gallery, props.id)}
                 >ADD TO CART</button>
             </div>
         </div>
@@ -61,7 +63,10 @@ function MDTP (dispatch) {
     return {
         favouriteToggle: function(prod) {
             dispatch(toggleFavorite(prod))
-        }
+        },
+        addItem : function(arr, id) {
+            dispatch(addToBasket(arr, id))
+        },
     }
 }
 

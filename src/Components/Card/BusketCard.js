@@ -6,19 +6,20 @@ import {priceBusket} from '../../react/actions/priceBusketAction';
 
 // import {totals} from '../../react/actions/totalBusketActions';
 
-
-const Card = ({name, img, price, count, countUnAdd, countAdd, priceBusket, priceBuskets, totalPriceBusket, countDelete}) => {
+// {name, img, price, count, countUnAdd, countAdd, priceBusket, priceBuskets, totalPriceBusket, countDelete, id, props}
+const BusketCard = (props) => {
+    // console.log();
     return (
         <div className={styles.items}>
         <div className={styles.first}>
-        <span onClick={() => countDelete(81)} className={styles.delete}>&times;</span> 
-            <img src={img} className={styles.img}/>
-            <span className={styles.name}>{name}</span>
+        <span onClick={() => countDelete(props.id)} className={styles.delete}>&times;</span> 
+            <img src={props.img} className={styles.img}/>
+            <span className={styles.name}>{props.img}</span>
         </div>
         <div className={styles.second}>
-            <button onClick={() => countUnAdd(81)} className={styles.cartBtn}>-</button>
-            <span className={styles.count}>{count}</span>
-            <button onClick={() => countAdd(81)} className={styles.cartBtn}>+</button>
+            <button onClick={() => countUnAdd(props.id)} className={styles.cartBtn}>-</button>
+            <span className={styles.count}>{props.count}</span>
+            <button onClick={() => countAdd(props.id)} className={styles.cartBtn}>+</button>
             {/* <p className={styles.price}>Price : ${busketTotal}</p> */}
          </div>   
         </div>
@@ -56,4 +57,4 @@ function MDTP (dispatch) {
        
     }
 }
-export default connect(MSTP, MDTP)(Card);
+export default connect(MSTP, MDTP)(BusketCard);
