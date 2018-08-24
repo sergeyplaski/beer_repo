@@ -3,7 +3,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {NavLink} from 'react-router-dom';
 import Card from '../Card/Card';
-import {expandMobileMenu, collapseMobileMenu} from '../../react/actions/mobileMenuActions';
+// import {expandMobileMenu, collapseMobileMenu} from '../../react/actions/mobileMenuActions';
 import styles from './Header.css';
 import Busket from '../Busket/Busket';
 import {busketActive} from '../../react/actions/isActiveAction';
@@ -12,18 +12,18 @@ const Header = (props) => {
     const rp = props.randomProduct;
     // console.log('rp', rp);
 
-    const closeMobMenu = (e) => {
-        if (!e.target.classList.contains('fas') && !e.target.classList.contains('fa-bars')) {
-            props.collapseMobMenu();
-        }
-    };
+    // const closeMobMenu = (e) => {
+    //     if (!e.target.classList.contains('fas') && !e.target.classList.contains('fa-bars')) {
+    //         props.collapseMobMenu();
+    //     }
+    // };
 
     return <div className={styles.header__wrapper}>
         <div
             className={styles["header__container"]}
-            onClick={closeMobMenu}
+            // onClick={closeMobMenu}
         >
-            {!props.mobMenuExpanded // mobile menu
+            {/* {!props.mobMenuExpanded // mobile menu
                 ? <span
                     className={styles["header__burger-icon"]}
                     onClick={props.expandMobMenu}
@@ -37,7 +37,7 @@ const Header = (props) => {
                     <li className={styles["header__menu-item"]}>Favorites</li>
                     <li className={styles["header__menu-item"]}>Featured</li>
                 </ul>
-            }
+            } */}
             <ul className={styles.header__menu}>
                 <li className={styles["header__menu-item"]}><NavLink exact to='/'>Home</NavLink></li>
                 <li className={styles["header__menu-item"]}><NavLink to='/favorites'>Favorites</NavLink></li>
@@ -99,12 +99,12 @@ function MSTP (state) {
 
 function MDTP (dispatch) {
     return {
-        expandMobMenu: function() {
-            dispatch(expandMobileMenu());
-        },
-        collapseMobMenu: function() {
-            dispatch(collapseMobileMenu());
-        },
+        // expandMobMenu: function() {
+        //     dispatch(expandMobileMenu());
+        // },
+        // collapseMobMenu: function() {
+        //     dispatch(collapseMobileMenu());
+        // },
         busketActive: function () {
             dispatch(busketActive())
         }

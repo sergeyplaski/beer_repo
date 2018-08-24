@@ -3,19 +3,20 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styles from './Busket.css';
 import {addToBasket, price, countDelete} from '../../react/actions/busketActions';
-import Cards from '../Card/BusketCard';
+import BusketCard from '../Card/BusketCard';
 import {busketActive} from '../../react/actions/isActiveAction';
 import {totalBusketSelectors} from '../../react/selectors/busketSelectors';
 
 const Busket = (props) => {
     // let classReact = React.createClass({color: 'white'})
+    // console.log(props.busket)
     return (
             <div className={styles.container}>
              <ul className={props.isActiveBusket ? `${styles.aside} ${styles.asideShow}` : styles.aside }><li className={styles.items}>{props.busket.map(el => 
-            <Cards name={el.name} img={el.img} price={el.price} count={el.count} key={el.id}/>)}</li> 
+            <BusketCard name={el.name} img={el.img} price={el.price} count={el.count} key={el.id} id={el.id}/>)}</li> 
                 
             {/* <div className={styles.buys}> */}
-                <span className={styles.buttonBuy}>Total: {props.busketTotal}₴</span>
+                <span className={styles.buttonBuy}>Total: {props.busketTotal.toFixed(1)}₴</span>
                 {/* <button className={styles.buttonBuy}>Buy</button> */}
             {/* </div> */}
             </ul>
