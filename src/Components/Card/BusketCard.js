@@ -3,6 +3,7 @@ import styles from './BusketCard.css';
 import {connect} from 'react-redux';
 import {addToBasket, countAdd, countUnAdd, price, countDelete, total} from '../../react/actions/busketActions';
 import {priceBusket} from '../../react/actions/priceBusketAction';
+import {totalBusketSelectors} from '../../react/selectors/busketSelectors';
 
 // import {totals} from '../../react/actions/totalBusketActions';
 
@@ -20,8 +21,10 @@ const BusketCard = (props) => {
             <button onClick={() => props.countUnAdd(props.id)} className={styles.cartBtn}>-</button>
             <span className={styles.count}>{props.count}</span>
             <button onClick={() => props.countAdd(props.id)} className={styles.cartBtn}>+</button>
+            
             {/* <p className={styles.price}>Price : ${busketTotal}</p> */}
          </div>   
+         {/* <span >Total: {props.busketTotal.toFixed(1)}₴</span> */}
         </div>
     );
 }
@@ -32,6 +35,7 @@ function MSTP (state) {
         beers: state.gallery,
         busket: state.busket,
         priceBuskets: state.priceBusket,
+        busketTotal: totalBusketSelectors(state),
         // totals: state.totalBusket,
     }
 }

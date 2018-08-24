@@ -9,6 +9,7 @@
     list-style: none;
     position: relative;
     margin-bottom: 1.25rem;
+    box-shadow: 5px 10px 8px #888888;
 }
 
 .cartBtn {
@@ -73,10 +74,10 @@
         right: 0;
     }
     .img {
-        width: 100px;
+        width: 60px;
         height: 150px;
     }
-    .second {
+    /* .second {
         margin: -15px;
-    }
+    } */
 }

@@ -12,13 +12,15 @@ const Busket = (props) => {
     // console.log(props.busket)
     return (
             <div className={styles.container}>
-             <ul className={props.isActiveBusket ? `${styles.aside} ${styles.asideShow}` : styles.aside }><li className={styles.items}>{props.busket.map(el => 
-            <BusketCard name={el.name} img={el.img} price={el.price} count={el.count} key={el.id} id={el.id}/>)}</li> 
-                
+             <ul className={props.isActiveBusket ? 
+             `${styles.aside} ${styles.asideShow}` :  styles.aside }><li className={styles.items}>
+             {props.busket.map(el =><BusketCard name={el.name} img={el.img} price={el.price} count={el.count} key={el.id} id={el.id}/>)}</li> 
+            
             {/* <div className={styles.buys}> */}
-                <span className={styles.buttonBuy}>Total: {props.busketTotal.toFixed(1)}₴</span>
+                
                 {/* <button className={styles.buttonBuy}>Buy</button> */}
             {/* </div> */}
+            <div className={styles.totalClose}><span className={styles.buttonBuy}>Total: {props.busketTotal.toFixed(1)}₴<span className={styles.closeBusket} onClick={props.busketActive}>&times;</span></span></div>
             </ul>
             
             
