@@ -47,9 +47,9 @@ const Header = (props) => {
         <Busket/>
 
             <span className={styles["header__basketicon"]}>
-                {props.busketItems > 0
+                {props.busket.length > 0
                     ? <span className={styles["header__basketcount"]}>
-                    {props.busketItems}
+                    {props.busket.length}
                     </span>
                     : null
                 }
@@ -93,7 +93,8 @@ function MSTP (state) {
         mobMenuExpanded: state.mobMenuExpanded,
         // busketItems: state.busket.length,
         busketItems: 3,
-        isActiveBusket: state.isActiveBusket
+        isActiveBusket: state.isActiveBusket,
+        busket: state.busket,
     }
 }
 
