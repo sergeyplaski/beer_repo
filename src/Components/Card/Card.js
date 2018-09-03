@@ -44,7 +44,7 @@ const Card = (props) => {
                 <NavLink to={`/beerPage/${props.name}`}>
                     <button className={styles.moreBtn}>More...</button>
                 </NavLink>
-                <button className={styles.cartBtn} onClick={() => props.addItem(props.gallery, props.id)}
+                <button className={styles.cartBtn} onClick={() => props.addItem([...props.gallery, props.randomProduct], props.id)}
                 >ADD TO CART</button>
             </div>
         </div>

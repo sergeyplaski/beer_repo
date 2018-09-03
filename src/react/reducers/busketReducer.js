@@ -1,7 +1,7 @@
 export default function busket (state = [], action){
     switch(action.type){
         case 'ADD':
-        const result = action.arr.find(el => el.id === action.id);
+            const result = action.arr.find(el => el.id === action.id);
         const cartItem = {
             name: result.name,
             id: result.id,
